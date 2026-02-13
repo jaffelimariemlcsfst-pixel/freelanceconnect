@@ -13,6 +13,167 @@ Welcome to the Academy Workshop! In this session, you will use **Google Antigrav
 -   **Google Cloud SDK** (gcloud) installed and authenticated.
 -   **Terraform** installed (optional, Antigravity can help you run it).
 
+# 💻 Prepare Your Local Environment (Windows First)
+
+> ⚠️ Please complete this setup **before** the workshop starts.  
+> If your environment is not ready, you may lose up to 45 minutes troubleshooting during the session.
+
+We recommend:
+- **Windows 11**
+- **PowerShell**
+
+---
+
+## 1️⃣ Install Node.js (Includes npm)
+
+Node.js is required for running the Next.js frontend.
+
+### Steps
+
+1. Go to: https://nodejs.org  
+2. Download the **LTS version**
+3. Run the installer (keep default settings)
+4. Open **PowerShell** and verify:
+
+```bash
+node -v
+npm -v
+```
+
+✅ If both commands return a version number, you’re good.
+
+
+---
+
+## 2️⃣ Install Python
+
+Python is required for the FastAPI backend.
+
+### Steps
+
+1. Go to: https://www.python.org
+
+2. Download the latest stable version
+
+3. ⚠️ ⚠️ ⚠️ IMPORTANT: Check “Add Python to PATH”
+
+4. Install
+
+Verify:
+
+```bash
+python --version
+pip --version
+```
+✅ If version numbers appear, you're good.
+
+
+---
+
+## 3️⃣ Install Google Cloud CLI (gcloud)
+We will use gcloud to deploy to Google Cloud.
+
+### Steps
+
+1. Download from:
+https://cloud.google.com/sdk/docs/install
+
+2. Run the installer
+
+3. Restart PowerShell
+
+4. Verify installation:
+```bash
+gcloud --version
+```
+✅ If it shows version information, installation is successful.
+
+
+---
+
+## 4️⃣ Authenticate with gcloud
+
+We will use `gcloud` to deploy to Google Cloud.
+
+### Steps
+
+1. Login and configure your project:
+
+```bash
+gcloud init
+```
+
+2. Follow the prompts
+- Log in with your Google account
+- Select your project
+- Choose default region (e.g., `us-central1`)
+
+3. Verify configuration:
+```bash
+gcloud config list
+```
+✅ Ensure your project ID is set correctly.
+
+
+---
+
+## 5️⃣ Install Terraform
+
+Terraform will provision your cloud infrastructure.
+
+- You can follow this Youtube tutorial
+https://www.youtube.com/watch?v=pySmwyRhx-A
+
+- or follow next steps 👇
+
+### Steps
+1. Download from:
+https://developer.hashicorp.com/terraform/downloads
+2. Right-click the downloaded ZIP file.
+3. Click Extract All.
+4. Extract it somewhere permanent, for example:
+```bash
+C:\terraform
+```
+After extraction, you should have:
+```bash
+C:\terraform\terraform.exe
+```
+⚠️ Important: Do NOT keep it in Downloads. Put it in a permanent folder.
+
+5. Add Terraform Folder to System PATH
+- Open Environment Variables:
+    - Press Windows Key
+    - Search: `Environment Variables`
+    - Click: `Edit the system environment variables`
+    - Then click: `Environment Variables…`
+- Edit the PATH Variable Under System variables:
+    - Find: `Path`
+    - Click `Edit`
+    - Click `New`
+    - Add the full path to your Terraform folder example:
+    ```bash
+        C:\terraform
+    ```
+    - click OK for all windows
+    - close everything
+- To apply changes Restart PowerShell
+- Verif installation with:
+```bash
+terraform version
+```
+
+---
+
+## 6️⃣ Install Google Antigravity
+Antigravity is the agentic IDE used during the workshop.
+
+- You can downlowad the IDE from: https://antigravity.google/download
+
+- Under windows select: `Download for x64`
+
+- install the .exe file downloaded 
+
 ## 🚀 Getting Started
 
 ### 1. Explore the IDE
