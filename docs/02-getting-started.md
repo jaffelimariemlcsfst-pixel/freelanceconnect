@@ -50,20 +50,10 @@ Now, let's build something! You can ask Antigravity to create a simple web app f
 > "Create a simple **FastAPI** app in the `backend/` directory that displays a 'Hello from Workshop!' message. Also create a Dockerfile for it."
 
 ### 4. Build and Deploy
-Once you have your application code:
 
-1.  **Build the Container:**
-    ```bash
-    gcloud builds submit --tag REGION-docker.pkg.dev/PROJECT_ID/REPO_NAME/IMAGE_NAME:tag .
-    ```
-    *(Replace with the `artifact_registry_url` from the Terraform output)*
+We will use **Cloud Build** for automated CI/CD.
 
-2.  **Deploy to Cloud Run:**
-    You can simply update the container image in your Cloud Run service using the console, or ask Antigravity to help you deploy the new image.
-
-    ```bash
-    gcloud run deploy workshop-app-service --image REGION-docker.pkg.dev/PROJECT_ID/REPO_NAME/IMAGE_NAME:tag --region us-central1
-    ```
+👉 **[Follow the Deployment Guide](./deployment/01-cloudbuild-config.md)** to set up your configuration and triggers.
 
 ### 5. Bonus: Build an AI Agent 🤖
 Take your application to the next level by adding an AI Agent using the **Agent Development Kit (ADK)**.
