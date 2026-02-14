@@ -18,3 +18,9 @@ Since we configured the triggers to run on **Push to main**, every time you push
 3.  Click on a build ID to see the logs and details.
 
 **Congratulations!** You have successfully set up automated deployments. 🚀
+
+### Next Steps
+
+Now that you have configured your deployment pipeline, you can proceed to the bonus section to build an AI Agent.
+
+[**Go to Bonus: Build an AI Agent**](../02-getting-started.md#5-bonus-build-an-ai-agent-)
